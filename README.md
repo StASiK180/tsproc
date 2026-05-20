@@ -1,7 +1,7 @@
 # tsproc
 tsproc - a simple console-based temporal metrics processor.
 
-Читает данные (stdin или файл) в трёх форматах: line (строка), csv, json (по строкам).
+- Читает данные (stdin или файл) в трёх форматах: line (строка), csv, json (по строкам).
 - Сгруппировывает значения по временным окнам (window) — тумблинг или sliding — и вычисляет агрегаты (count, sum, avg, min, max, p95 и т.д.).
 - Выводит результаты в консоль в человекочитаемом виде или в csv/json.
 
@@ -10,14 +10,14 @@ tsproc - a simple console-based temporal metrics processor.
 python3 tsproc.py --help
 
 Основные опции
-- --input, -i (по умолчанию '-') — путь к входному файлу или '-' для stdin.
-- --format, -f (line|csv|json) — формат входа (по умолчанию line).
-- --window (например 10s, 1m) — размер окна (обязателен, есть значение по умолчанию '10s').
-- --slide — размер шага (если пустой -> tumbling / нет перекрытия; если указан -> sliding).
-- --aggs — запрашиваемые агрегаты, перечисленные через запятую (по умолчанию count,avg,min,max,sum,p95).
-- --out — формат вывода: console (читаемый), csv, json (по умолчанию console).
-- --metric — имя поля метрики в csv/json (по умолчанию 'metric').
-- --value — имя поля со значением в csv/json (по умолчанию 'value').
-- --timestamp — имя поля с таймстемпом в csv/json (по умолчанию 'timestamp').
-- --timefmt — формат времени для strptime (по умолчанию "%Y-%m-%dT%H:%M:%S%z").
-- --unix — 's' или 'ms' чтобы принудительно интерпретировать числовой timestamp как unix seconds/millis; 'auto' (по умолчанию) пытается догадаться.
+--input, -i (по умолчанию '-') — путь к входному файлу или '-' для stdin.
+--format, -f (line|csv|json) — формат входа (по умолчанию line).
+--window (например 10s, 1m) — размер окна (обязателен, есть значение по умолчанию '10s').
+--slide — размер шага (если пустой -> tumbling / нет перекрытия; если указан -> sliding).
+--aggs — запрашиваемые агрегаты, перечисленные через запятую (по умолчанию count,avg,min,max,sum,p95).
+--out — формат вывода: console (читаемый), csv, json (по умолчанию console).
+--metric — имя поля метрики в csv/json (по умолчанию 'metric').
+--value — имя поля со значением в csv/json (по умолчанию 'value').
+--timestamp — имя поля с таймстемпом в csv/json (по умолчанию 'timestamp').
+--timefmt — формат времени для strptime (по умолчанию "%Y-%m-%dT%H:%M:%S%z").
+--unix — 's' или 'ms' чтобы принудительно интерпретировать числовой timestamp как unix seconds/millis; 'auto' (по умолчанию) пытается догадаться.
