@@ -1,0 +1,5 @@
+metric,value,timestamp
+requests,120,2021-08-25T10:00:00Z
+requests,100,2021-08-25T10:00:05Z
+latency,200,2021-08-25T10:00:01Z
+latency,150,2021-08-25T10:00:06Z
